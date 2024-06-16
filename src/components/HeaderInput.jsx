@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function HeaderInput() {
   return (
     <InputParent>
-      <Input type="text" name="" id="" />
+      <Input type="text" name="" id="" placeholder="Create a new Todo..." />
     </InputParent>
   );
 }
@@ -19,5 +19,5 @@ const Input = styled.input`
   border-radius: 0.3em;
   padding: 1em;
   margin-bottom: 2em;
-  width: 65%;
+  width: 100%;
 `;

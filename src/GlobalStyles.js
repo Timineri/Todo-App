@@ -20,8 +20,7 @@ const GlobalStyles = createGlobalStyle`
 */
 html, body {
   height: 100%;
-  /* background-color: #E5E5E5;
-  font-family: 'Raleway', sans-serif; */
+  font-family: 'Josefin Sans';
 }
 
 /*
@@ -47,6 +46,13 @@ img, picture, video, canvas, svg {
 */
 input, button, textarea, select {
   font: inherit;
+  color: inherit;
+  /* color: hsl(233, 14%, 35%); */
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border: none;
+  /* color: hsl(233, 14%, 35%); */
 }
 
 /*

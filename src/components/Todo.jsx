@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Stats from "./Stats";
+import Header from "./Header";
 
 const Items = [
   { id: 1, description: "Complete online Javascript course", checked: false },
@@ -17,6 +18,7 @@ export default function Todo() {
   return (
     <TodoParentContainer>
       <TodoContainer>
+        <Header />
         <TodoListContainer>
           {Items.map((Item) => (
             <TodoItems Item={Item} key={Item.id} />
@@ -32,8 +34,12 @@ export default function Todo() {
 function TodoItems({ Item }) {
   return (
     <TodoList>
-      <InputCheckbox type="checkbox" />
-      {Item.description}
+      <form>
+        <label className="checkbox">
+          <input type="checkbox" id="to-do" />
+          <span htmlFor="to-do">{Item.description}</span>
+        </label>
+      </form>
     </TodoList>
   );
 }
@@ -54,6 +60,7 @@ const TodoListContainer = styled.div`
   list-style-type: none;
   line-height: 3em;
   color: hsl(234, 39%, 85%);
+  /* color: hsl(234, 11%, 52%); */
   cursor: pointer;
 `;
 
@@ -62,11 +69,12 @@ const TodoList = styled.li`
   padding: 0.3em 1em;
 `;
 
-const InputCheckbox = styled.input`
-  margin-right: 10px;
-`;
+// const InputCheckbox = styled.input`
+//   margin-right: 10px;
+// `;
 
 const Paragraph = styled.p`
   text-align: center;
   padding: 2em;
+  color: hsl(233, 14%, 35%);
 `;
